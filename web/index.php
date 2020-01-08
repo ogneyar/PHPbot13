@@ -13,13 +13,13 @@ $token = getenv("TOKEN_NEWTESTBOT");
 
 // Мастер это Я
 $master = '351009636';
-echo $master;
+
 $method = 'sendMessage';
 $data = [
     'chat_id' => $master,
     'text' => 'nheneeee'
 ];
-echo $method;
+
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, "https://api.telegram.org/bot" . $token . '/' . $method);
 curl_setopt($ch, CURLOPT_POST, count($data));
@@ -105,6 +105,8 @@ class Bot
         return $result;
     }
 }
-exit('ok'); //Обязательно возвращаем "ok", чтобы телеграмм не подумал, что запрос не дошёл
+
 */
+exit('ok'); //Обязательно возвращаем "ok", чтобы телеграмм не подумал, что запрос не дошёл
+
 ?>
