@@ -1,0 +1,11 @@
+{  
+  "require-dev": {
+    "heroku/heroku-buildpack-php": "*"
+  },
+    "repositories":[
+        {
+            "type":"git",
+            "url":"https://github.com/heroku/heroku-buildpack-php"
+        }
+    ]
+}
