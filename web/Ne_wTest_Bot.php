@@ -1,12 +1,13 @@
 <?php 
+echo "\ncool";
 // определяем кодировку
 header('Content-type: text/html; charset=utf-8');
-
+echo "\nmool";
 include_once '../vendor/autoload.php';
-
+echo "\npool";
 // токен из heroku config
 $token = getenv("TOKEN_NEWTESTBOT");
-
+echo "\n".$token;
 // Мастер это Я
 $master='351009636';
 
