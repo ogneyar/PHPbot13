@@ -7,6 +7,7 @@ echo "\ncool";
 // определяем кодировку
 header('Content-type: text/html; charset=utf-8');
 echo "\nmool";
+/*
 include_once '../vendor/autoload.php';
 echo "\npool";
 // токен из heroku config
@@ -21,6 +22,7 @@ $bot->init('php://input');
 /**
  * Class Bot
  */
+/*
 class Bot
 {
     // $token - созданный токен для нашего бота от @BotFather
@@ -56,6 +58,7 @@ class Bot
      * @param $data
      * @return mixed
      */
+/*
     private function getData($data)
     {
         return json_decode(file_get_contents($data), TRUE);
@@ -65,6 +68,7 @@ class Bot
      * @param string $type
      * @return mixed
      */
+/*
     private function call($data, $type)
     {
         $result = null;
@@ -81,5 +85,5 @@ class Bot
     }
 }
 exit('ok'); //Обязательно возвращаем "ok", чтобы телеграмм не подумал, что запрос не дошёл
-
+*/
 ?>
