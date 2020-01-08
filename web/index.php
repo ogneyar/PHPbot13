@@ -1,26 +1,43 @@
 <?php
-echo "\n\n\n<h1>Вот те раз))</h1>";
+echo "\n\n\n<h1>Начало:</h1>";
 
 //include_once 'Ne_wTest_Bot.php'; // Подключение бота
 
-echo "\ncool";
 // определяем кодировку
 header('Content-type: text/html; charset=utf-8');
-echo "\nmool";
 
 include_once '../vendor/autoload.php';
-echo "\npool";
 
 // токен из heroku config
 $token = getenv("TOKEN_NEWTESTBOT");
-echo "\ntool";
 
-echo "\n".$token;
-/*
 // Мастер это Я
-$master='351009636';
+$master = '351009636';
+echo $master;
+$method = 'sendMessage';
+$data = [
+    'chat_id' => $master,
+    'text' => 'nheneeee'
+];
+echo $method;
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "https://api.telegram.org/bot" . $token . '/' . $method);
+curl_setopt($ch, CURLOPT_POST, count($data));
+curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+$result = curl_exec($ch);
+curl_close($ch);
+
+
+
+
+
+
+/*
+
 // Создаем объект бота
 $bot = new Bot();
+
 // Обрабатываем пришедшие данные
 $bot->init('php://input');
 /**
