@@ -33,23 +33,31 @@ curl_close($ch);
 
 
 
-/*
+
 
 // Создаем объект бота
-$bot = new Bot();
+$bot = new Bot($token);
 
 // Обрабатываем пришедшие данные
 $bot->init('php://input');
+
 /**
  * Class Bot
  */
-/*
+
 class Bot
 {
     // $token - созданный токен для нашего бота от @BotFather
-    private $botToken = $token;
+    private $token = null;
     // адрес для запросов к API Telegram
     private $apiUrl = "https://api.telegram.org/bot";
+    
+    public function __construct($token)
+    {
+        $this->token = $token;
+    }
+    
+    
     public function init($data_php)
     {
         // создаем массив из пришедших данных от API Telegram
@@ -66,36 +74,40 @@ class Bot
                 $this->sendMessage($chat_id, "Что это?");            
         }
     }
+    
+    
     // функция отправки текстового сообщения
     private function sendMessage($chat_id, $text)
     {
-        $this->call([
+        $this->call("sendMessage", [
             'chat_id' => $chat_id,
-            'text' => $text,
-        ], "sendMessage");
+            'text' => $text
+        ]);
     }
+    
+    
     /**
      * Парсим что приходит преобразуем в массив
      * @param $data
      * @return mixed
      */
-/*
     private function getData($data)
     {
         return json_decode(file_get_contents($data), TRUE);
     }
+    
+    
     /** Отправляем запрос в Телеграмм
      * @param $data
      * @param string $type
      * @return mixed
      */
-/*
-    private function call($data, $type)
+    private function call($method, $data)
     {
         $result = null;
         if (is_array($data)) {
             $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, $this->apiUrl . $this->botToken . '/' . $type);
+            curl_setopt($ch, CURLOPT_URL, $this->apiUrl . $this->token . '/' . $method);
             curl_setopt($ch, CURLOPT_POST, count($data));
             curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
@@ -106,7 +118,7 @@ class Bot
     }
 }
 
-*/
+
 exit('ok'); //Обязательно возвращаем "ok", чтобы телеграмм не подумал, что запрос не дошёл
 
 ?>
