@@ -61,7 +61,7 @@ class Bot
      * @param string $type
      * @return mixed
      */
-    private function call($method, $data)
+    public function call($method, $data)
     {
         $result = null;
         if (is_array($data)) {
