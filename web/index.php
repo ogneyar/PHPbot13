@@ -1,7 +1,5 @@
 <?php
-echo "\n\n\n<h1>Начало:</h1>";
-
-//include_once 'Ne_wTest_Bot.php'; // Подключение бота
+echo "<center><h1>Начало: в принципе отличное, а то и превосходное!</h1></center>";
 
 // определяем кодировку
 header('Content-type: text/html; charset=utf-8');
@@ -13,13 +11,12 @@ $token = getenv("TOKEN_NEWTESTBOT");
 
 // Мастер это Я
 $master = '351009636';
-
+/*
 $method = 'sendMessage';
 $data = [
     'chat_id' => $master,
     'text' => 'nheneeee'
 ];
-
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, "https://api.telegram.org/bot" . $token . '/' . $method);
 curl_setopt($ch, CURLOPT_POST, count($data));
@@ -27,13 +24,7 @@ curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
 $result = curl_exec($ch);
 curl_close($ch);
-
-
-
-
-
-
-
+*/
 
 // Создаем объект бота
 $bot = new Bot($token);
