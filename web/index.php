@@ -19,7 +19,7 @@ $bot = new Bot($token);
 // Обрабатываем пришедшие данные
 $bot->init('php://input');
 
-$bot->call('sendMessage', ['chat_id' => $master, 'text' => 'Крутебл']);
+//$bot->call('sendMessage', ['chat_id' => $master, 'text' => 'Крутебл']);
 
 exit('ok'); //Обязательно возвращаем "ok", чтобы телеграмм не подумал, что запрос не дошёл
 ?>
