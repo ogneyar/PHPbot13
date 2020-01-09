@@ -1,14 +1,8 @@
 <?php
-echo "<center><h1>Начало: в принципе отличное, а то и превосходное!</h1></center>";
-
-// определяем кодировку
-//header('Content-type: text/html; charset=utf-8');
-
-//include_once '../vendor/autoload.php';
 include_once 'Bot.php';
 
 // токен из heroku config
-$token = getenv("TOKEN_NEWTESTBOT");
+$token = getenv("TOKEN");
 
 // Мастер это Я
 $master = '351009636';
@@ -17,9 +11,18 @@ $master = '351009636';
 $bot = new Bot($token);
 
 // Обрабатываем пришедшие данные
-$bot->init('php://input');
+$arr = $bot->init('php://input');
 
-//$bot->call('sendMessage', ['chat_id' => $master, 'text' => 'Крутебл']);
+$chat_id = $arr['message']['chat']['id'];
+        
+// проверяем если пришло сообщение
+if ($data['message']['text']) {
+    // отправка сообщения в ответ
+    $bot->call('sendMessage', ['chat_id' => $chat_id, 'text' => "Приветствую! Как дела?"]);         
+} else {
+    // если пришло что-то другое
+    $bot->call('sendMessage', ['chat_id' => $chat_id, 'text' => "Чего это такое?"]);
+}
 
 exit('ok'); //Обязательно возвращаем "ok", чтобы телеграмм не подумал, что запрос не дошёл
 ?>
