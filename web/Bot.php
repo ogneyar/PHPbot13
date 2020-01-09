@@ -20,18 +20,9 @@ class Bot
     public function init($data_php)
     {
         // создаем массив из пришедших данных от API Telegram
-        $data = $this->getData($data_php);
-        // id чата отправителя
-        $chat_id = $data['message']['chat']['id'];
+        $data = $this->getData($data_php); 
         
-        // проверяем если пришло сообщение
-        if ($data['message']['text']) {
-        	// отправка сообщения в ответ
-       		$this->sendMessage($chat_id, "Приветствую! Как дела?");         
-        } else {
-            	// если пришло что-то другое
-                $this->sendMessage($chat_id, "Что это?");            
-        }
+        return $data;        
     }
     
     
