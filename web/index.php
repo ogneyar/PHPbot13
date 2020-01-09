@@ -1,19 +1,16 @@
 <?php
+// Подключаем библиотеку с классом Bot
 include_once 'Bot.php';
-
-// токен из heroku config
-$token = getenv("TOKEN");
-
-// Мастер это Я
-$master = '351009636';
+// Подключаем библиотеку с глобальными переменными
+include_once 'Conect.php';
 
 // Создаем объект бота
 $bot = new Bot($token);
 
 // Обрабатываем пришедшие данные
-$arr = $bot->init('php://input');
+$data = $bot->init('php://input');
 
-$chat_id = $arr['message']['chat']['id'];
+$chat_id = $data['message']['chat']['id'];
         
 // проверяем если пришло сообщение
 if ($data['message']['text']) {
