@@ -8,4 +8,6 @@
 	
 	$token = getenv("TOKEN");
 
+	$master = getenv("MASTER");
+
 ?>
