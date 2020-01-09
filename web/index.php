@@ -4,7 +4,7 @@ echo "<center><h1>Начало: в принципе отличное, а то и
 // определяем кодировку
 header('Content-type: text/html; charset=utf-8');
 
-include_once '../vendor/autoload.php';
+//include_once '../vendor/autoload.php';
 include_once 'Bot.php';
 
 // токен из heroku config
