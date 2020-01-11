@@ -48,8 +48,8 @@ class Bot
     
     
     /** Отправляем запрос в Телеграмм
-     * @param $data
-     * @param string $type
+     * @param string $method
+     * @param $data     
      * @return mixed
      */
     public function call($method, $data)
