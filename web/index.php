@@ -19,7 +19,7 @@ if ($data['message']['text']) {
 
 $bot->call('sendMessage', [
    'chat_id' => $chat_id,
-   'text' => "[a cho?](tg://user?id=1038937592)",
+   'text' => "[901072981](tg://user?id=901072981)",
    'parse_mode' => 'markdown'
 ]);
 
