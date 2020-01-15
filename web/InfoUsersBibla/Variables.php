@@ -70,8 +70,15 @@ if ($data['message']){
 
 
 
-
-$RKeyMarkup = ['keyboard' => [[["Настройки"]]]];
+$RKeyMarkup = [
+	'keyboard' => [
+		[
+			[
+				'text' => "Настройки"
+			]
+		]
+	]
+];
 //,['text' => "Вторая новая кнопка!"]
 
 $ReplyKeyboardMarkup = [
@@ -110,10 +117,6 @@ $InlineKeyboardMarkup = [
 		]
 	]
 ];
-
-
-
-
 
 
 
