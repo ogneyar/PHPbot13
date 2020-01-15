@@ -14,8 +14,7 @@ class Bot
     public function __construct($token)
     {
         $this->token = $token;
-    }
-    
+    }    
     
     public function init($data_php)
     {
@@ -24,10 +23,50 @@ class Bot
         
         return $data;        
     }
+	
+	/**
+     * Парсим что приходит преобразуем в массив
+     * @param $data
+     * @return mixed
+     */
+    private function getData($data)
+    {
+        return json_decode(file_get_contents($data), TRUE);
+    }
     
     
-    // функция отправки текстового сообщения
-    public function sendMess(
+    /** Отправляем запрос в Телеграмм
+     * @param string $method
+     * @param array $data     
+     * @return mixed
+     */
+    public function call($method, $data)
+    {
+        $result = null;
+        if (is_array($data)) {
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $this->apiUrl . $this->token . '/' . $method);
+            curl_setopt($ch, CURLOPT_POST, count($data));
+            curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+            $result = curl_exec($ch);
+            curl_close($ch);
+        }
+        return $result;
+    }
+    
+    
+    // функция отправки текстового сообщения	
+	/*  @param	$chat_id, 
+ 	 *  @param	$text,
+	 *  @param	$parse_mode = null,
+	 *  @param	$reply_markup = null,
+	 *  @param	$disable_web_page_preview = false,
+	 *  @param	$disable_notification = false,
+	 *  @param	$reply_to_message_id = null
+	 *  @return mixed
+	 */
+    public function sendMessage(
 		$chat_id, 
 		$text,
 		$parse_mode = null,
@@ -47,44 +86,16 @@ class Bot
 			'disable_notification' => $disable_notification,
 			'reply_to_message_id' => $reply_to_message_id,
 			'reply_markup' => $reply_markup
-		]);
-		
-		//is_null($reply_markup) ? $reply_markup : json_encode($reply_markup)
+		]);	
 		
 		return $response;
 	}
     
-    
-    /**
-     * Парсим что приходит преобразуем в массив
-     * @param $data
-     * @return mixed
-     */
-    private function getData($data)
-    {
-        return json_decode(file_get_contents($data), TRUE);
-    }
+	
+	 public function answerCallbackQuery(
+		
     
     
-    /** Отправляем запрос в Телеграмм
-     * @param string $method
-     * @param $data     
-     * @return mixed
-     */
-    public function call($method, $data)
-    {
-        $result = null;
-        if (is_array($data)) {
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, $this->apiUrl . $this->token . '/' . $method);
-            curl_setopt($ch, CURLOPT_POST, count($data));
-            curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
-            $result = curl_exec($ch);
-            curl_close($ch);
-        }
-        return $result;
-    }
 }
 
 ?>
