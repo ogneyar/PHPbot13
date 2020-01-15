@@ -3,9 +3,9 @@
 // функция старта бота ИНФОРМАЦИЯ О ПОЛЬЗОВАТЕЛЯХ
 function _start_InfoUsers_bota() {		
 
-	global $bot, $mess_chat_id, $mess_from_fName, $HideKeyboard, $ReplyKeyboardMarkup, $RKeyMarkup;
+	global $bot, $mess_chat_id, $mess_from_fName, $HideKeyboard, $ReplyKeyboardMarkup, $RKeyMarkup, $InlineKeyboardMarkup;
 	
-	$bot->sendMess($mess_chat_id, "Добро пожаловать, *".$mess_from_fName."*!", markdown, $RKeyMarkup);	
+	$bot->sendMess($mess_chat_id, "Добро пожаловать, *".$mess_from_fName."*!", markdown, $InlineKeyboardMarkup);	
 	
 }
 

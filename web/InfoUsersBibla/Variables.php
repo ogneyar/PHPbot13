@@ -69,7 +69,9 @@ if ($data['message']){
 }
 
 
-$RKeyMarkup = ['keyboard' => [[["Новая кнопка!"]]]];
+
+
+$RKeyMarkup = ['keyboard' => [[["Настройки"]]]];
 //,['text' => "Вторая новая кнопка!"]
 
 $ReplyKeyboardMarkup = [
@@ -96,5 +98,31 @@ $HideKeyboard = [
 	'hide_keyboard' => true,
     'selective' => false,
 ];
+
+
+$InlineKeyboardMarkup = [
+	'inline_keyboard' => [
+		[
+			[
+				'text' => 'Настройки',
+				'callback_data' => 'settings'
+			]
+		]
+	]
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ?>
