@@ -91,7 +91,7 @@ class Bot
 		return $response;
 	}
     
-	
+/*	
 	public function answerCallbackQuery(
 		$callback_query_id,
 		$text null,
@@ -109,7 +109,7 @@ class Bot
 		
 		return $response;
 	}
-	
+*/
     
     
 }
