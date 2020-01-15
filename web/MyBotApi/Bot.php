@@ -30,13 +30,21 @@ class Bot
     public function sendMess(
 		$chat_id, 
 		$text,
-		$parse_mode = null
+		$parse_mode = null,
+		$reply_markup = null,
+		$disable_web_page_preview = false,
+		$disable_notification = false,
+		$reply_to_message_id = null
 	) {
 		
 		$response = $this->call("sendMessage", [
 			'chat_id' => $chat_id,
 			'text' => $text,
-			'parse_mode' => $parse_mode
+			'parse_mode' => $parse_mode,			
+			'disable_web_page_preview' => $disable_web_page_preview,
+			'disable_notification' => $disable_notification,
+			'reply_to_message_id' => $reply_to_message_id,
+			'reply_markup' => is_null($reply_markup) ? $reply_markup : json_encode($reply_markup)
 		]);
 		
 		return $response;
