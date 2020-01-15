@@ -36,8 +36,8 @@ if (mysqli_connect_errno()) {
 	
 	//$this_admin = _this_admin();
 	
-	if ($mess_text == "/start"||$mess_text == "s"||$mess_text == "S"||$mess_text == "с"||$mess_text == "С"||$mess_text == "c"||$mess_text == "C"||$mess_text == "Старт"||$mess_text == "старт") {
-		if ($mess_chat_type=='private') {
+	if ($text == "/start"||$text == "s"||$text == "S"||$text == "с"||$text == "С"||$text == "c"||$text == "C"||$text == "Старт"||$text == "старт") {
+		if ($chat_type=='private') {
 			_start_InfoUsers_bota();  			
 		}	
 	}
