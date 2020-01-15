@@ -92,24 +92,24 @@ class Bot
 	}
     
 	
-	 public function answerCallbackQuery(
+	public function answerCallbackQuery(
 		$callback_query_id,
 		$text null,
 		$show_alert = false,
 		$url = null,
-		$cache_time = null,
+		$cache_time = null
 	){
 		$response = $this->call("answerCallbackQuery", [
 			'callback_query_id' => $callback_query_id,
 			'text' => $text,
 			'show_alert' => $show_alert,
 			'url' => $url,
-			'cache_time' => $cache_time,
+			'cache_time' => $cache_time
 		]);
 		
 		return $response;
 	}
-		
+	
     
     
 }
