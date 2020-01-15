@@ -2,6 +2,8 @@
 // Обрабатываем пришедшие данные
 $data = $bot->init('php://input');
 
+$update_id = $data['update_id'];
+
 if ($data['message']){
 
 	$message_id = $data['message']['message_id'];
@@ -43,6 +45,24 @@ if ($data['message']){
 	
 	$mess_text = $data['message']['text'];
 	
+}elseif ($data['edited_message']){
+
+}elseif ($data['channel_post']) {
+
+}elseif ($data['edited_channel_post']) {
+
+}elseif ($data['inline_query']) {
+
+}elseif ($data['chosen_inline_result']) {
+
+}elseif ($data['callback_query']) {
+
+}elseif ($data['shipping_query']) {
+
+}elseif ($data['pre_checkout_query']) {
+
+}elseif ($data['poll']) {
+
 }
 
 $hideKeyboard = [
