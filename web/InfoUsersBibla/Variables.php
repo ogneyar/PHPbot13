@@ -69,8 +69,8 @@ if ($data['message']){
 }
 
 
-$RKeyMarkup = ['keyboard' => [[['text' => "Новая кнопка!"],['text' => "Вторая новая кнопка!"]]]];
-
+$RKeyMarkup = ['keyboard' => [[['text' => "Новая кнопка!"]]]];
+//,['text' => "Вторая новая кнопка!"]
 
 $ReplyKeyboardMarkup = [
 	'keyboard' => [
@@ -78,12 +78,12 @@ $ReplyKeyboardMarkup = [
 			[
 				'text' => "Новая кнопка!",
 				'request_contact' => false,
-				'request_location' => false
+				'request_location' => false,
 			],
 			[
 				'text' => "Вторая новая кнопка!",
 				'request_contact' => false,
-				'request_location' => false
+				'request_location' => false,
 			],
 		],
 	],

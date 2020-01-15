@@ -23,7 +23,7 @@ if ($mess_text) {
 		
 		if ($mess_text=='Настройки'){
 		
-			$bot->sendMess($mess_chat_id, PrintArr($ReplyKeyboardMarkup));
+			$bot->sendMess($mess_chat_id, PrintArr($RKeyMarkup));
 		
 		}else{
 		
