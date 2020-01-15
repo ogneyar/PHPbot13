@@ -94,7 +94,7 @@ class Bot
 
 	public function answerCallbackQuery(
 		$callback_query_id,
-		$text null,
+		$text = null,
 		$show_alert = false,
 		$url = null,
 		$cache_time = null
