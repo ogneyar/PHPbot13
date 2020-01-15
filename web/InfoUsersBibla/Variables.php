@@ -65,9 +65,16 @@ if ($data['message']){
 
 }
 
-$hideKeyboard = [
+$ReplyKeyboardMarkup = [
+	'keyboard' => [
+		[],
+		[]
+	],
+];
+
+$HideKeyboard = [
 	'hide_keyboard' => true,
-    'selective' => null
+    'selective' => false
 ];
 
 ?>
