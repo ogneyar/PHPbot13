@@ -17,19 +17,23 @@ if ($mess_text) {
 			"last name: ".$mess_fFrom_lName."\n".
 			"username: ".$mess_fFrom_uName;
 		
-		$bot->sendMess($mess_chat_id, $reply, markdown);	
+		$bot->sendMessage($mess_chat_id, $reply, markdown);	
 		
 	}else {
 		
 		if ($mess_text=='Настройки'){
 		
-			$bot->sendMess($mess_chat_id, PrintArr($InlineKeyboardMarkup));
+			$bot->sendMessage($mess_chat_id, PrintArr($InlineKeyboardMarkup));
 		
+		}elseif ($mess_text=='Стоп'){
+		
+			$bot->sendMessage($mess_chat_id, "Всего Вам доброго! До новых встречь!", null, $HideKeyboard);
+			
 		}else{
 		
 			// отправка сообщения в ответ
-			$bot->sendMess($mess_chat_id, "Перешлите мне чьё либо сообщение, ".
-				"я выдам информацию о лице, его написавшем", null, $RKeyMarkup);  
+			$bot->sendMessage($mess_chat_id, "Перешлите мне чьё либо сообщение, ".
+				"я выдам информацию о лице, его написавшем.", null, $RKeyMarkup);  
 
 		}
 		

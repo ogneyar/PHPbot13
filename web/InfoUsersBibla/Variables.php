@@ -74,13 +74,16 @@ $RKeyMarkup = [
 	'keyboard' => [
 		[
 			[
-				'text' => "Настройки"
+				'text' => "Старт"
+			],
+			[
+				'text' => "Стоп"
 			]
 		]
 	],
 	'resize_keyboard' => true
 ];
-//,['text' => "Вторая новая кнопка!"]
+
 
 $ReplyKeyboardMarkup = [
 	'keyboard' => [
