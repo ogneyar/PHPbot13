@@ -45,4 +45,9 @@ if ($data['message']){
 	
 }
 
+$hideKeyboard = [
+	'hide_keyboard' => true,
+    'selective' => null
+];
+
 ?>
