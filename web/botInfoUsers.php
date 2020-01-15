@@ -15,7 +15,7 @@ $id_bota = strstr($token, ':', true);
 $admin_group = $admin_group_InfoUsers;
 
 // ФЛАГ ДЛЯ ВКЛЮЧЕНИЯ РЕЖИМА ОТЛАДКИ БОТА
-//$OtladkaBota = 'да';
+$OtladkaBota = 'да';
 
 // Подключение БД
 $mysqli = new mysqli($host, $username, $password, $dbname);
@@ -32,13 +32,8 @@ if (mysqli_connect_errno()) {
 	//$text = str_replace ("@TesterBotoffBot", "", $text);
 
 	// ПОДКЛЮЧЕНИЕ ВСЕХ ОСНОВНЫХ ФУНКЦИЙ
-	include 'InfoUsersBibla/Functions.php';
+	include 'InfoUsersBibla/Functions.php';	
 	
-	if ($OtladkaBota == 'да') {
-		// Вывод на печать JSON файла пришедшего от бота, в группу тестирования
-		$reply=printf($data);
-		$bot->sendMess($test_group, $reply); 
-	}
 	
 	//$this_admin = _this_admin();
 	
