@@ -37,6 +37,8 @@ class Bot
 		$reply_to_message_id = null
 	) {
 		
+		if ($reply_markup) $reply_markup = json_encode($reply_markup);
+		
 		$response = $this->call("sendMessage", [
 			'chat_id' => $chat_id,
 			'text' => $text,
