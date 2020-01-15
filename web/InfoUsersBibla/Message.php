@@ -4,11 +4,17 @@
 if ($mess_text) {
 
 	if ($data['message']['forward_from']) {	
+
+		if ($mess_fFrom_uName!='отсутствует') $mess_fFrom_uName = "@".$mess_fFrom_uName;
+		
+		$mess_fFrom_fName = str_replace ("_", "\_", $mess_fFrom_fName);
+		$mess_fFrom_lName = str_replace ("_", "\_", $mess_fFrom_lName);
+		$mess_fFrom_uName = str_replace ("_", "\_", $mess_fFrom_uName);
 		
 		$reply = "Информация о пользователе:\n".
-			"id: [".$mess_fFrom_id."](tg://user?id=".$mess_fFrom_id.")/n".
-			"first_name: ".$mess_fFrom_fName."\n".
-			"last_name: ".$mess_fFrom_lName."\n".
+			"id: [".$mess_fFrom_id."](tg://user?id=".$mess_fFrom_id.")\n".
+			"first name: ".$mess_fFrom_fName."\n".
+			"last name: ".$mess_fFrom_lName."\n".
 			"username: ".$mess_fFrom_uName;
 		
 		$bot->sendMess($mess_chat_id, $reply, markdown);	
