@@ -44,8 +44,10 @@ class Bot
 			'disable_web_page_preview' => $disable_web_page_preview,
 			'disable_notification' => $disable_notification,
 			'reply_to_message_id' => $reply_to_message_id,
-			'reply_markup' => is_null($reply_markup) ? $reply_markup : json_encode($reply_markup)
+			'reply_markup' => $reply_markup
 		]);
+		
+		//is_null($reply_markup) ? $reply_markup : json_encode($reply_markup)
 		
 		return $response;
 	}
