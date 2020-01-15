@@ -69,7 +69,7 @@ if ($data['message']){
 }
 
 
-$RKeyMarkup = ['keyboard' => [[['text' => "Новая кнопка!"]]]];
+$RKeyMarkup = ['keyboard' => [['text' => "Новая кнопка!"]]];
 //,['text' => "Вторая новая кнопка!"]
 
 $ReplyKeyboardMarkup = [
