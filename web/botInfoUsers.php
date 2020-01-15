@@ -26,14 +26,13 @@ if (mysqli_connect_errno()) {
 	exit('ok');
 }else { 	
 
-	// ПОДКЛЮЧЕНИЕ ВСЕХ ОСНОВНЫХ ПЕРЕМЕННЫХ
-	include 'InfoUsersBibla/Variables.php';
-	
-	//$text = str_replace ("@TesterBotoffBot", "", $text);
-
 	// ПОДКЛЮЧЕНИЕ ВСЕХ ОСНОВНЫХ ФУНКЦИЙ
 	include 'InfoUsersBibla/Functions.php';	
 	
+	// ПОДКЛЮЧЕНИЕ ВСЕХ ОСНОВНЫХ ПЕРЕМЕННЫХ
+	include 'InfoUsersBibla/Variables.php';
+	
+	//$text = str_replace ("@TesterBotoffBot", "", $text);	
 	
 	//$this_admin = _this_admin();
 	
