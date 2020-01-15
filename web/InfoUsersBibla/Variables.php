@@ -77,7 +77,8 @@ $RKeyMarkup = [
 				'text' => "Настройки"
 			]
 		]
-	]
+	],
+	'resize_keyboard' => true
 ];
 //,['text' => "Вторая новая кнопка!"]
 
