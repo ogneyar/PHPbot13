@@ -29,6 +29,7 @@ if ($text) {
 		
 			$bot->sendMessage($chat_id, "Всего Вам доброго! До новых встречь!", null, $HideKeyboard);
 			
+			
 		}else{
 		
 			// отправка сообщения в ответ
