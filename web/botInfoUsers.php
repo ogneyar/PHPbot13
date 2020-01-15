@@ -22,7 +22,7 @@ $mysqli = new mysqli($host, $username, $password, $dbname);
 
 // проверка подключения 
 if (mysqli_connect_errno()) {
-	$bot->sendMess($master, 'Чёт не выходит подключиться к MySQL');	
+	$bot->sendMessage($master, 'Чёт не выходит подключиться к MySQL');	
 	exit('ok');
 }else { 	
 
