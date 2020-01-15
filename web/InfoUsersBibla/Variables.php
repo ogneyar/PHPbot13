@@ -72,10 +72,7 @@ if ($data['message']){
 
 $RKeyMarkup = [
 	'keyboard' => [
-		[
-			[
-				'text' => "Старт"
-			],
+		[			
 			[
 				'text' => "Стоп"
 			]
@@ -83,7 +80,11 @@ $RKeyMarkup = [
 	],
 	'resize_keyboard' => true
 ];
-
+/*
+[
+				'text' => "Старт"
+			],
+*/
 
 $ReplyKeyboardMarkup = [
 	'keyboard' => [
