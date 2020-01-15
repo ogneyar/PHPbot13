@@ -1,0 +1,48 @@
+﻿<?
+// Обрабатываем пришедшие данные
+$data = $bot->init('php://input');
+
+if ($data['message']){
+
+	$message_id = $data['message']['message_id'];
+
+	if ($data['message']['from']){
+	
+		$mess_from_id = $data['message']['from']['id'];
+		$mess_from_fName = $data['message']['from']['first_name'];
+		$mess_from_lName = $data['message']['from']['last_name'];
+		$mess_from_uName = $data['message']['from']['username'];
+		$mess_from_lang = $data['message']['from']['language_code'];
+	}
+	
+	if ($data['message']['chat']){
+	
+		$mess_chat_id = $data['message']['chat']['id'];
+		$mess_chat_fName = $data['message']['chat']['first_name'];
+		$mess_chat_lName = $data['message']['chat']['last_name'];
+		$mess_chat_uName = $data['message']['chat']['username'];
+		$mess_chat_title = $data['message']['chat']['title'];
+		$mess_chat_type = $data['message']['chat']['type'];
+		
+	}
+		
+	$mess_date = $data['message']['date'];
+		
+	if ($data['message']['forward_from']) {
+
+		$mess_fFrom_id = $data['message']['forward_from']['id'];
+		$mess_fFrom_fName = $data['message']['forward_from']['first_name'];
+		$mess_fFrom_lName = $data['message']['forward_from']['last_name'];
+		if ($mess_fFrom_lName=="") $mess_fFrom_lName = 'отсутствует';
+		$mess_fFrom_uName = $data['message']['forward_from']['username'];
+		if ($mess_fFrom_uName=="") $mess_fFrom_uName = 'отсутствует';
+
+	}
+
+	$mess_fDate = $data['message']['forward_date'];
+	
+	$mess_text = $data['message']['text'];
+	
+}
+
+?>
