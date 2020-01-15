@@ -2,6 +2,9 @@
 // Обрабатываем пришедшие данные
 $data = $bot->init('php://input');
 
+// Вывод на печать JSON файла пришедшего от бота, в группу тестирования
+if ($OtladkaBota == 'да') $bot->sendMess($test_group, PrintArr($data)); 
+
 $update_id = $data['update_id'];
 
 if ($data['message']){
@@ -65,6 +68,10 @@ if ($data['message']){
 
 }
 
+
+$RKeyMarkup = ['keyboard' => [[['text' => "Новая кнопка!"],['text' => "Вторая новая кнопка!"]]]];
+
+
 $ReplyKeyboardMarkup = [
 	'keyboard' => [
 		[
@@ -77,17 +84,17 @@ $ReplyKeyboardMarkup = [
 				'text' => "Вторая новая кнопка!",
 				'request_contact' => false,
 				'request_location' => false
-			]
-		]
+			],
+		],
 	],
 	'resize_keyboard' => false,
 	'one_time_keyboard' => false,
-	'selective' => false
+	'selective' => false,
 ];
 
 $HideKeyboard = [
 	'hide_keyboard' => true,
-    'selective' => false
+    'selective' => false,
 ];
 
 ?>
