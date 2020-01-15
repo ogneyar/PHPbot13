@@ -5,7 +5,7 @@ function _start_InfoUsers_bota() {
 
 	global $bot, $chat_id, $from_first_name, $HideKeyboard, $ReplyKeyboardMarkup, $RKeyMarkup, $InlineKeyboardMarkup;
 	
-	$bot->sendMessage($chat_id, "Добро пожаловать, *".$from_first_name."*!", markdown, $RKeyMarkup);	
+	$bot->sendMessage($chat_id, "Добро пожаловать, *".$from_first_name."*!", markdown, $InlineKeyboardMarkup);	
 	
 }
 

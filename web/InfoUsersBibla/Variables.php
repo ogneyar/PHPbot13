@@ -129,6 +129,7 @@ $ReplyKeyboardMarkup = [
 	'selective' => false,
 ];
 
+
 $HideKeyboard = [
 	'hide_keyboard' => true,
     'selective' => false,
@@ -139,8 +140,8 @@ $InlineKeyboardMarkup = [
 	'inline_keyboard' => [
 		[
 			[
-				'text' => 'Настройки',
-				'callback_data' => 'settings'
+				'text' => 'Информация',
+				'callback_data' => 'information'
 			]
 		]
 	]
