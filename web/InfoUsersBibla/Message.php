@@ -1,38 +1,38 @@
 ﻿<?
 
 // проверяем если пришло сообщение
-if ($mess_text) {
+if ($text) {
 
-	if ($data['message']['forward_from']) {	
+	if ($message_forward) {	
 
-		if ($mess_fFrom_uName!='отсутствует') $mess_fFrom_uName = "@".$mess_fFrom_uName;
+		if ($forward_username!='отсутствует') $forward_username = "@".$forward_username;
 		
-		$mess_fFrom_fName = str_replace ("_", "\_", $mess_fFrom_fName);
-		$mess_fFrom_lName = str_replace ("_", "\_", $mess_fFrom_lName);
-		$mess_fFrom_uName = str_replace ("_", "\_", $mess_fFrom_uName);
+		$forward_first_name = str_replace ("_", "\_", $forward_first_name);
+		$forward_last_name = str_replace ("_", "\_", $forward_last_name);
+		$forward_username = str_replace ("_", "\_", $forward_username);
 		
 		$reply = "Информация о пользователе:\n".
-			"id: [".$mess_fFrom_id."](tg://user?id=".$mess_fFrom_id.")\n".
-			"first name: ".$mess_fFrom_fName."\n".
-			"last name: ".$mess_fFrom_lName."\n".
-			"username: ".$mess_fFrom_uName;
+			"id: [".$forward_id."](tg://user?id=".$forward_id.")\n".
+			"first name: ".$forward_first_name."\n".
+			"last name: ".$forward_last_name."\n".
+			"username: ".$forward_username;
 		
-		$bot->sendMessage($mess_chat_id, $reply, markdown);	
+		$bot->sendMessage($chat_id, $reply, markdown);	
 		
 	}else {
 		
-		if ($mess_text=='Настройки'){
+		if ($text=='Настройки'){
 		
-			$bot->sendMessage($mess_chat_id, PrintArr($InlineKeyboardMarkup));
+			$bot->sendMessage($chat_id, PrintArr($InlineKeyboardMarkup));
 		
-		}elseif ($mess_text=='Стоп'){
+		}elseif ($text=='Стоп'){
 		
-			$bot->sendMessage($mess_chat_id, "Всего Вам доброго! До новых встречь!");
+			$bot->sendMessage($chat_id, "Всего Вам доброго! До новых встречь!", null, $HideKeyboard);
 			
 		}else{
 		
 			// отправка сообщения в ответ
-			$bot->sendMessage($mess_chat_id, "Перешлите мне чьё либо сообщение, ".
+			$bot->sendMessage($chat_id, "Перешлите мне чьё либо сообщение, ".
 				"я выдам информацию о лице, его написавшем.", null, $RKeyMarkup);  
 
 		}
@@ -42,7 +42,7 @@ if ($mess_text) {
 }else {
 
     // если пришло что-то другое
-    $bot->call('sendMessage', ['chat_id' => $mess_chat_id, 'text' => "Чего это такое?"]);
+    $bot->call('sendMessage', ['chat_id' => $chat_id, 'text' => "Чего это такое?"]);
 }
 
 
