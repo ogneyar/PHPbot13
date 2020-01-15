@@ -92,7 +92,7 @@ class Bot
 	}
     
 	
-	 public function answerCallbackQuery(
+	 public function answerCallbackQuery(){}
 		
     
     
