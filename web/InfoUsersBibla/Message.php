@@ -27,7 +27,7 @@ if ($mess_text) {
 		
 		}elseif ($mess_text=='Стоп'){
 		
-			$bot->sendMessage($mess_chat_id, "Всего Вам доброго! До новых встречь!", null, $HideKeyboard);
+			$bot->sendMessage($mess_chat_id, "Всего Вам доброго! До новых встречь!");
 			
 		}else{
 		
