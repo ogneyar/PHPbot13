@@ -67,9 +67,20 @@ if ($data['message']){
 
 $ReplyKeyboardMarkup = [
 	'keyboard' => [
-		[],
-		[]
+		[
+			'text' => "Новая кнопка!",
+			'request_contact' => false,
+			'request_location' => false
+		],
+		[
+			'text' => "Вторая новая кнопка!",
+			'request_contact' => false,
+			'request_location' => false
+		]
 	],
+	'resize_keyboard' => false,
+	'one_time_keyboard' => false,
+	'selective' => false
 ];
 
 $HideKeyboard = [
