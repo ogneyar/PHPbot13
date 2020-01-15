@@ -20,11 +20,19 @@ if ($mess_text) {
 		$bot->sendMess($mess_chat_id, $reply, markdown);	
 		
 	}else {
+		
+		if ($mess_text=='Настройки'){
+		
+			$bot->sendMess($mess_chat_id, $ReplyKeyboardMarkup);
+		
+		}else{
+		
+			// отправка сообщения в ответ
+			$bot->sendMess($mess_chat_id, "Перешлите мне чьё либо сообщение, ".
+				"я выдам информацию о лице, его написавшем");  
 
-		// отправка сообщения в ответ
-		$bot->sendMess($mess_chat_id, "Перешлите мне чьё либо сообщение, ".
-			"я выдам информацию о лице, его написавшем");  
-
+		}
+		
 	}	
        
 }else {
