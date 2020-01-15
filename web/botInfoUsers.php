@@ -42,8 +42,12 @@ if (mysqli_connect_errno()) {
 		}	
 	}
 	
+	if ($data['callback_query']) {
+	
+		include_once 'InfoUsersBibla/Callback_query.php';
+	
 	// если пришло сообщение MESSAGE подключается необходимый файл
-	if ($data['message']) include_once 'InfoUsersBibla/Message.php';		
+	}elseif ($data['message']) include_once 'InfoUsersBibla/Message.php';		
 }
 
 // закрываем подключение 
