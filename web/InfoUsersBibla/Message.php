@@ -21,6 +21,8 @@ if ($text) {
 		
 	}elseif (strpos($text, "@")!==false) {
 		
+		$text = str_replace("@", "", $text);
+		
 		$result = $bot->getChat($text);
 		
 		$result = json_decode($result, true);
