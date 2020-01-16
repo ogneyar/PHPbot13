@@ -23,9 +23,9 @@ if ($text) {
 		
 		$result = $bot->getChat($chat_id);
 		
-		$mass = json_decode(file_get_contents($result));
+		//$mass = json_decode($result);
 		
-		$bot->sendMessage($chat_id, $mass['result']['id']);
+		$bot->sendMessage($chat_id, $result);
 
 		//PrintArr(json_decode($result))
 		
