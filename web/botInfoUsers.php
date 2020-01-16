@@ -1,6 +1,6 @@
 ﻿<?
 // Подключаем библиотеку с классом Bot
-include_once 'MyBotApi/Bot.php';
+include_once 'InfoUsersBibla/Bot.php';
 // Подключаем библиотеку с глобальными переменными
 include_once 'a_conect.php';
 //exit('ok');
