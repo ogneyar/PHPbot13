@@ -44,15 +44,19 @@ if ($text) {
 			
 			$res = $result['result'];
 			
-		//	if ($res['last_name']=='') $res['last_name'] = 'неизвестно';
+			if ($res['last_name']=='') $res['last_name'] = 'неизвестно';
 			
 			if ($res['username']=='') $res['username'] = 'неизвестно';
 			else $res['username'] = "@".$res['username'];
 			
+			$res['first_name'] = str_replace ("_", "\_", $res['first_name']);
+			$res['last_name'] = str_replace ("_", "\_", $res['last_name']);
+			$res['username'] = str_replace ("_", "\_", $res['username']);
+			
 			$reply = "Информация о пользователе:\n".
 				"id: [".$res['id']."](tg://user?id=".$res['id'].")\n".
 				"first name: ".$res['first_name']."\n".
-				//"last name: ".$res['last_name']."\n".
+				"last name: ".$res['last_name']."\n".
 				"username: ".$res['username'];
 		
 			$bot->sendMessage($chat_id, $reply, markdown);		
