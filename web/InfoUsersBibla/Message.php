@@ -19,14 +19,6 @@ if ($text) {
 		
 		$bot->sendMessage($chat_id, $reply, markdown);	
 		
-	}elseif (strpos($text, "@")!==false) {
-				
-		$result = $bot->getChat($text);
-		
-		$result = json_decode($result, true);
-		
-		$bot->sendMessage($chat_id, PrintArr($result));
-		
 	}elseif ($text=='Настройки'){
 		
 		$bot->sendMessage($chat_id, PrintArr($data));
@@ -40,7 +32,11 @@ if ($text) {
 			
 	}else{
 		
-		_info();  	
+		$result = $bot->getChat($text);
+		
+		$result = json_decode($result, true);
+		
+		if ($result['ok']==false) _info();  	
 		
 	}	
        
@@ -49,6 +45,19 @@ if ($text) {
     // если пришло что-то другое
     $bot->call('sendMessage', ['chat_id' => $chat_id, 'text' => "Чего это такое?"]);
 }
+
+
+/*
+if (strpos($text, "@")!==false) {
+				
+	$result = $bot->getChat($text);
+		
+	$result = json_decode($result, true);
+		
+	$bot->sendMessage($chat_id, PrintArr($result));
+		
+}
+*/
 
 
 ?>
