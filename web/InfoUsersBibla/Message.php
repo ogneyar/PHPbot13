@@ -19,7 +19,7 @@ if ($text) {
 		
 		$bot->sendMessage($chat_id, $reply, markdown);	
 		
-	}elseif (strpos($text, '@')='0') {
+	}elseif (strpos($text, '@')=='0') {
 		
 		$result = $bot->getChat($text);
 		

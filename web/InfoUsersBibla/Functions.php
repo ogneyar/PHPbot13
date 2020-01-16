@@ -27,4 +27,14 @@ function PrintArr($mass, $i=0) {
 	return $_this;
 }
 
+// при возникновении исключения вызывается эта функция
+function exception_handler($exception) {
+
+	global $bot, $master;
+	
+	$bot->sendMessage($master, "Ошибка! ".$exception->getCode()." ".$exception->getMessage());	
+  
+	exit('ok');  
+}
+
 ?>
