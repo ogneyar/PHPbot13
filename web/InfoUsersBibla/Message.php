@@ -23,11 +23,9 @@ if ($text) {
 		
 		$result = $bot->getChat($chat_id);
 		
-		//$mass = json_decode($result);
+		$result = json_decode($result, true);
 		
-		$bot->sendMessage($chat_id, $result);
-
-		//PrintArr(json_decode($result))
+		$bot->sendMessage($chat_id, PrintArr($result));
 		
 	}elseif ($text=='Настройки'){
 		
