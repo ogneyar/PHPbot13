@@ -32,6 +32,9 @@ if (mysqli_connect_errno()) {
 	// ПОДКЛЮЧЕНИЕ ВСЕХ ОСНОВНЫХ ПЕРЕМЕННЫХ
 	include 'InfoUsersBibla/Variables.php';
 	
+	// Обработчик исключений
+	set_exception_handler('exception_handler');
+	
 	//$text = str_replace ("@TesterBotoffBot", "", $text);	
 	
 	//$this_admin = _this_admin();
