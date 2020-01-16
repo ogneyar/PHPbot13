@@ -21,7 +21,7 @@ if ($text) {
 		
 	}elseif (strpos($text, "@")!==false) {
 		
-		$result = $bot->getChat($text);
+		$result = $bot->getChat($chat_id);
 		
 		$bot->sendMessage($chat_id, PrintArr($result));	
 		
@@ -36,9 +36,7 @@ if ($text) {
 			
 	}else{
 		
-		// отправка сообщения в ответ
-		$bot->sendMessage($chat_id, "Перешлите мне чьё либо сообщение, ".
-				"я выдам информацию о лице, его написавшем.", null, $RKeyMarkup);  	
+		_info();  	
 		
 	}	
        
