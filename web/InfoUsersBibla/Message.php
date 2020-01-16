@@ -21,7 +21,7 @@ if ($text) {
 		
 	}elseif (strpos($text, "@")!==false) {
 		
-		$result = $bot->getChat($chat_id);
+		$result = $bot->getChat($text);
 		
 		$result = json_decode($result, true);
 		
