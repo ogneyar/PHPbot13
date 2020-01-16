@@ -23,7 +23,7 @@ if ($text) {
 		
 		$result = $bot->getChat($chat_id);
 		
-		$result = json_decode($result);
+		//$result = json_decode($result);
 		
 		$bot->sendMessage($chat_id, $result['result']['type']);
 
