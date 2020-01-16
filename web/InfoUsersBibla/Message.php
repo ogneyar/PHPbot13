@@ -20,9 +20,7 @@ if ($text) {
 		$bot->sendMessage($chat_id, $reply, markdown);	
 		
 	}elseif (strpos($text, "@")!==false) {
-		
-		$text = str_replace("@", "", $text);
-		
+				
 		$result = $bot->getChat($text);
 		
 		$result = json_decode($result, true);
