@@ -19,11 +19,11 @@ if ($text) {
 		
 		$bot->sendMessage($chat_id, $reply, markdown);	
 		
-	}elseif (strpos($text, '@')=='0') {
+	}elseif (strpos($text, "@")!==false) {
 		
-		//$result = $bot->getChat($text);
+		$result = $bot->getChat($text);
 		
-		//$bot->sendMessage($chat_id, PrintArr($result));	
+		$bot->sendMessage($chat_id, PrintArr($result));	
 		
 	}elseif ($text=='Настройки'){
 		
