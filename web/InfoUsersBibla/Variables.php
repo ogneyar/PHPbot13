@@ -67,6 +67,8 @@ if ($data['message']){
 		if ($forward_username=="") $forward_username = 'отсутствует';
 
 	}
+	
+	$forward_sender_name = $data['message']['forward_sender_name'];
 
 	$forward_date = $data['message']['forward_date'];
 	

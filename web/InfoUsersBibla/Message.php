@@ -19,6 +19,10 @@ if ($text) {
 		
 		$bot->sendMessage($chat_id, $reply, markdown);	
 		
+	}elseif ($forward_sender_name){
+		
+		$bot->sendMessage($chat_id, $forward_sender_name."\n\nПрофиль скрыт.");
+		
 	}elseif ($text=='Настройки'){
 		
 		$bot->sendMessage($chat_id, PrintArr($data));
