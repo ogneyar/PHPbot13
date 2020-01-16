@@ -23,7 +23,7 @@ if ($text) {
 		
 		$result = $bot->getChat($chat_id);
 		
-		$mass = json_decode($result);
+		$mass = json_decode(file_get_contents($result));
 		
 		$bot->sendMessage($chat_id, $mass['result']['id']);
 
