@@ -36,7 +36,9 @@ if ($text) {
 		
 		$result = json_decode($result, true);
 		
-		if ($result['ok']==false) _info();  	
+		if ($result['ok']==false) _info(); 
+		
+		else $bot->sendMessage($chat_id, PrintArr($result));
 		
 	}	
        
