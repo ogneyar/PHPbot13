@@ -36,9 +36,23 @@ if ($text) {
 		
 		$result = json_decode($result, true);
 		
-		if ($result['ok']==false) _info(); 
+		if ($result['ok']==false) {
+			
+			_info(); 
 		
-		else $bot->sendMessage($chat_id, PrintArr($result));
+		}else {
+			
+			$res = $result['result'];
+			
+			$reply = "Информация о пользователе:\n".
+				"id: [".$res['id']."](tg://user?id=".$res['id'].")\n".
+				"first name: ".$res['first_name']."\n".
+				"last name: ".$res['last_name']."\n".
+				"username: ".$res['username'];
+		
+			$bot->sendMessage($chat_id, $reply, markdown);		
+		
+		}
 		
 	}	
        
