@@ -23,7 +23,7 @@ if ($text) {
 		
 		$result = $bot->getChat($chat_id);
 		
-		$bot->sendMessage($chat_id, PrintArr($result));	
+		$bot->sendMessage($chat_id, PrintArr(json_decode($result)));	
 		
 	}elseif ($text=='Настройки'){
 		
