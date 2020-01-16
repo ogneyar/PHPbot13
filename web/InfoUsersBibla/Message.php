@@ -21,28 +21,24 @@ if ($text) {
 		
 	}elseif (strpos($text, '@')=='0') {
 		
-		$result = $bot->getChat($text);
+		//$result = $bot->getChat($text);
 		
-		$bot->sendMessage($chat_id, PrintArr($result));	
+		//$bot->sendMessage($chat_id, PrintArr($result));	
 		
-	}else {
+	}elseif ($text=='Настройки'){
 		
-		if ($text=='Настройки'){
+		$bot->sendMessage($chat_id, PrintArr($InlineKeyboardMarkup));
 		
-			$bot->sendMessage($chat_id, PrintArr($InlineKeyboardMarkup));
+	}elseif ($text=='Стоп'){
 		
-		}elseif ($text=='Стоп'){
-		
-			$bot->sendMessage($chat_id, "Всего Вам доброго! До новых встречь!", null, $HideKeyboard);
+		$bot->sendMessage($chat_id, "Всего Вам доброго! До новых встречь!", null, $HideKeyboard);
 			
 			
-		}else{
+	}else{
 		
-			// отправка сообщения в ответ
-			$bot->sendMessage($chat_id, "Перешлите мне чьё либо сообщение, ".
-				"я выдам информацию о лице, его написавшем.", null, $RKeyMarkup);  
-
-		}
+		// отправка сообщения в ответ
+		$bot->sendMessage($chat_id, "Перешлите мне чьё либо сообщение, ".
+				"я выдам информацию о лице, его написавшем.", null, $RKeyMarkup);  	
 		
 	}	
        
