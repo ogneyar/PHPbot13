@@ -109,6 +109,14 @@ class Bot
 		
 		return $response;
 	}
+	
+	
+	public function getChat($chat_id){
+		
+		$response = $this->call("getChat", ['chat_id' => $chat_id]);
+		
+		return $response;
+	}
 
     
     
