@@ -44,6 +44,11 @@ if ($text) {
 			
 			$res = $result['result'];
 			
+			if ($res['last_name']=='') $res['last_name'] = 'неизвестно';
+			
+			if ($res['username']=='') $res['username'] = 'неизвестно';
+			else $res['username'] = "@".$res['username'];
+			
 			$reply = "Информация о пользователе:\n".
 				"id: [".$res['id']."](tg://user?id=".$res['id'].")\n".
 				"first name: ".$res['first_name']."\n".
