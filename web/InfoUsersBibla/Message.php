@@ -23,15 +23,19 @@ if ($text) {
 		
 		$result = $bot->getChat($chat_id);
 		
-		$bot->sendMessage($chat_id, PrintArr(json_decode($result)));	
+		$bot->sendMessage($chat_id, "eee");
+
+		//PrintArr(json_decode($result))
 		
 	}elseif ($text=='Настройки'){
 		
-		$bot->sendMessage($chat_id, PrintArr($InlineKeyboardMarkup));
+		$bot->sendMessage($chat_id, PrintArr($data));
 		
 	}elseif ($text=='Стоп'){
 		
-		$bot->sendMessage($chat_id, "Всего Вам доброго! До новых встречь!", null, $HideKeyboard);
+		$reply = "Всего Вам доброго! До новых встречь!\n\nДля возврата жмите /start";
+		
+		$bot->sendMessage($chat_id, $reply, null, $HideKeyboard);
 			
 			
 	}else{
