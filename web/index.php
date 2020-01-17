@@ -14,9 +14,9 @@ try {
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
-    $mail->Host       = 'e.mail.ru';                              // Set the SMTP server to send through
+    $mail->Host       = 'mail.ru';                              // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'ogneyar_ya';                     // SMTP username
+    $mail->Username   = 'ogneyar_ya@mail.ru';                     // SMTP username
     $mail->Password   = $passSMTP;                               // SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
