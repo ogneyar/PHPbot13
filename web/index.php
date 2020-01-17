@@ -5,6 +5,7 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 include_once '../vendor/autoload.php';
+include_once 'a_conect.php';
 
 // `true` включает исключения (exceptions)
 $mail = new PHPMailer(true);
@@ -21,7 +22,7 @@ try {
     $mail->Port       = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('from@example.com', 'Mailer');
+    $mail->setFrom('ya13th@mail.ru', 'Mailer');
 //    $mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
 //    $mail->addAddress('ellen@example.com');               // Name is optional
 //    $mail->addReplyTo('info@example.com', 'Information');
