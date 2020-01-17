@@ -36,6 +36,10 @@ $mail->Subject = 'PHPMailer sendmail test';
 //convert HTML into a basic plain-text alternative body
 //$mail->msgHTML(file_get_contents('contents.html'), __DIR__);
 
+ 
+$mail->Body    = 'This is the HTML message body <b>in bold!</b>';  
+  
+  
 //Replace the plain text body with one created manually
 $mail->AltBody = 'This is a plain-text message body';
 
