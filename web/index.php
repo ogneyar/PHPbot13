@@ -11,6 +11,9 @@ echo '\n\n222';
 $mail = new PHPMailer(true);
 
 try {
+    
+echo '\n\n333';
+    
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
@@ -21,12 +24,12 @@ try {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
- echo '\n\n333';
+
     
     //Recipients
     $mail->setFrom('ogneyar_ya@mail.ru', 'Mailer');
 //    $mail->addAddress('ya13th@mail.ru', 'Joe User');     // Add a recipient
-//    $mail->addAddress('ellen@example.com');               // Name is optional
+    $mail->addAddress('ogneyar-ne@yandex.ru', 'not Jon');               // Name is optional
 //    $mail->addReplyTo('info@example.com', 'Information');
 //    $mail->addCC('cc@example.com');
 //    $mail->addBCC('bcc@example.com');
