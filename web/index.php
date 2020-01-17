@@ -6,20 +6,26 @@ use PHPMailer\PHPMailer\Exception;
 
 include_once '../vendor/autoload.php';
 include_once 'a_conect.php';
-echo '\n\n222';
+echo '<br><br>222';
 // `true` включает исключения (exceptions)
 $mail = new PHPMailer(true);
 
 try {
     
-echo '\n\n333';
+echo '<br><br>333';
     
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
+    
+echo '<br><br>444';
+    
     $mail->Host       = 'e.mail.ru';                              // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'ogneyar_ya';                     // SMTP username
+    
+echo '<br><br>555';
+    
     $mail->Password   = $passSMTP;                               // SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
