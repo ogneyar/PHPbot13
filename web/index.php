@@ -15,6 +15,8 @@ echo '<br><br>222';
 //Create a new PHPMailer instance
 $mail = new PHPMailer;
 
+try{
+
 // Set PHPMailer to use the sendmail transport
 $mail->isSendmail();
 
@@ -41,23 +43,16 @@ $mail->AltBody = 'This is a plain-text message body';
 //$mail->addAttachment('images/phpmailer_mini.png');
 
 
-
+/*
 
 
 // `true` включает исключения (exceptions)
-//$mail = new PHPMailer(true);
+$mail = new PHPMailer(true);
 
 try {
   
    
 echo '<br><br>333';
-
-    
-    
-/*    
-    
-    
-    
   
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
