@@ -12,4 +12,6 @@
 
 	$master = getenv("MASTER");
 
+	$passSMTP = getenv("PASSWORD_SMTP");
+
 ?>
