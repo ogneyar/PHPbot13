@@ -13,7 +13,7 @@ echo '222<br><br>';
 
 
 //Create a new PHPMailer instance
-$mail = new PHPMailer;
+$mail = new PHPMailer(true);
 
 try{
 
