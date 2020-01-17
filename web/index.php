@@ -18,18 +18,20 @@ echo '<br><br>333';
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
     
-echo '<br><br>444';
+echo '<br><br>444<br><br>';
     
     $mail->Host       = 'e.mail.ru';                              // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'ogneyar_ya';                     // SMTP username
     
-echo '<br><br>555';
+echo '555<br><br>';
     
     $mail->Password   = $passSMTP;                               // SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
+    
+echo '666<br><br>';
 
     
     //Recipients
@@ -43,12 +45,16 @@ echo '<br><br>555';
     // Attachments
 //    $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
 //    $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-
+    
+echo '777<br><br>';
+    
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Here is the subject';
     $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    
+echo '888<br><br>';
 
     $mail->send();
     echo 'Message has been sent';
