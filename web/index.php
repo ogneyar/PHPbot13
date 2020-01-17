@@ -20,7 +20,7 @@ echo '<br><br>333';
     
 echo '<br><br>444<br><br>';
     
-    $mail->Host       = 'e.mail.ru';                              // Set the SMTP server to send through
+    $mail->Host       = 'mail.ru';                              // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'ogneyar_ya';                     // SMTP username
     
