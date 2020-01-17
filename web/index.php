@@ -37,10 +37,10 @@ echo '666<br><br>';
     //Recipients
     $mail->setFrom('ogneyar_ya@mail.ru', 'Mailer');
 //    $mail->addAddress('ya13th@mail.ru', 'Joe User');     // Add a recipient
-//    $mail->addAddress('ogneyar-ne@yandex.ru', 'not Jon');               // Name is optional
+    $mail->addAddress('ogneyar-ne@yandex.ru');               // Name is optional
 //    $mail->addReplyTo('info@example.com', 'Information');
 //    $mail->addCC('cc@example.com');
-//    $mail->addBCC('bcc@example.com');
+    $mail->addBCC('ogneyar_ya@mail.ru');
 
     // Attachments
 //    $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
