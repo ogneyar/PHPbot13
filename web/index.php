@@ -40,7 +40,7 @@ echo '666<br><br>';
     $mail->addAddress('ogneyar-ne@yandex.ru');               // Name is optional
 //    $mail->addReplyTo('info@example.com', 'Information');
 //    $mail->addCC('cc@example.com');
-    $mail->addBCC('ogneyar_ya@mail.ru');
+//    $mail->addBCC('ogneyar_ya@mail.ru');
 
     // Attachments
 //    $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
