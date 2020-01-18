@@ -108,7 +108,7 @@ $RKeyMarkup = [
 		]
 	],
 	'resize_keyboard' => true,
-        'selective' => false,
+        'selective' => true,
 ];
 
 
