@@ -44,7 +44,7 @@ if ($text) {
 		
 		if ($result['ok']==false) {
 			
-			_info(); 
+			if ($chat_type=='private') _info(); 
 		
 		}else {
 			
@@ -71,7 +71,7 @@ if ($text) {
 		
 	}	
        
-}else {
+}elseif ($chat_type=='private') {
 
     // если пришло что-то другое
     $bot->call('sendMessage', ['chat_id' => $chat_id, 'text' => "Чего это такое?"]);
