@@ -50,7 +50,7 @@ if (mysqli_connect_errno()) {
 		include_once 'InfoUsersBibla/Callback_query.php';
 	
 	// если пришло сообщение MESSAGE подключается необходимый файл
-	}elseif ($data['message']&&$chat_type=='private') include_once 'InfoUsersBibla/Message.php';		
+	}elseif ($data['message']) include_once 'InfoUsersBibla/Message.php';		
 }
 
 // закрываем подключение 
