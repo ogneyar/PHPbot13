@@ -1,7 +1,6 @@
 <?php
-echo '111<br><br>';
 use PHPMailer\PHPMailer\PHPMailer;
-//use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 include_once '../vendor/autoload.php';
@@ -9,6 +8,39 @@ include_once 'a_conect.php';
 
 echo '222<br><br>';
 
+
+// Using Awesome https://github.com/PHPMailer/PHPMailer
+
+//require 'PHPMailerAutoload.php';
+
+$mail = new PHPMailer;
+
+$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->Host = 'smtp.mailgun.org';                     // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username = 'postmaster@YOUR_DOMAIN_NAME';   // SMTP username
+$mail->Password = 'secret';                           // SMTP password
+$mail->SMTPSecure = 'tls';                            // Enable encryption, only 'tls' is accepted
+
+$mail->From = 'YOU@YOUR_DOMAIN_NAME';
+$mail->FromName = 'Mailer';
+$mail->addAddress('bar@example.com');                 // Add a recipient
+
+$mail->WordWrap = 50;                                 // Set word wrap to 50 characters
+
+$mail->Subject = 'Hello';
+$mail->Body    = 'Testing some Mailgun awesomness';
+
+if(!$mail->send()) {
+    echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
+} else {
+    echo 'Message has been sent';
+}
+
+
+
+/*
 
 
 
@@ -101,7 +133,7 @@ echo '777<br><br>';
 echo '888<br><br>';
 
 
-*/
+
 
 
     $mail->send();
@@ -110,7 +142,7 @@ echo '888<br><br>';
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}<br>";
 }
 
-
+*/
 // Подключаем файл бота
 include_once 'botInfoUsers.php';
 
