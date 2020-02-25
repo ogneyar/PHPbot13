@@ -7,6 +7,8 @@
 	$dbname = substr($url["path"], 1);
 	
 	$tokenInfoUsers = getenv("TOKEN_INFOUSERS");
+        $tokenMadeline = getenv("TOKEN_MADELINE");
+
 	$admin_group_InfoUsers = getenv('ADMIN_GROUP_INFOUSERS');	
 	$test_group = getenv('TEST_GROUP');
 
