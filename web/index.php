@@ -19,8 +19,8 @@ $mail->Username = $mail_smtp_login;   // SMTP username
 $mail->Password = $mail_smtp_pass;    // SMTP password
 $mail->SMTPSecure = 'tls';            // Enable encryption, only 'tls' is accepted
 
-$mail->From = 'support@heroku.ru';
-$mail->FromName = 'PhpBot-NaHeroku';
+$mail->From = 'support@pzmarket.ru';
+$mail->FromName = 'PRIZMarket';
 $mail->addAddress('ya13th@mail.ru');  // добавить получателя
 
 $mail->WordWrap = 50;                 // автоматический перенос символов
@@ -32,11 +32,12 @@ if(!$mail->send()) {
     echo 'Не смог отправить сообщение.';
     echo 'Ошибка: ' . $mail->ErrorInfo;
 } else {
-    echo 'Сообщение отправлено!\n\n';
+    echo 'Сообщение отправлено!</br></br>';
+	exit('ok');
 }
 
 // Подключаем файл бота
-include_once 'botInfoUsers.php';
+//include_once 'botInfoUsers.php';
 
-include_once 'botMadeline.php';
+//include_once 'botMadeline.php';
 ?>
