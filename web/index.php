@@ -15,18 +15,18 @@ echo '222<br><br>';
 
 $mail = new PHPMailer;
 
-$mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.mailgun.org';                     // Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'postmaster@YOUR_DOMAIN_NAME';   // SMTP username
-$mail->Password = 'secret';                           // SMTP password
-$mail->SMTPSecure = 'tls';                            // Enable encryption, only 'tls' is accepted
+$mail->isSMTP();                      // Set mailer to use SMTP
+$mail->Host = $mail_smtp_server;      // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;               // Enable SMTP authentication
+$mail->Username = $mail_smtp_login;   // SMTP username
+$mail->Password = $mail_smtp_pass;    // SMTP password
+$mail->SMTPSecure = 'tls';            // Enable encryption, only 'tls' is accepted
 
-$mail->From = 'YOU@YOUR_DOMAIN_NAME';
-$mail->FromName = 'Mailer';
-$mail->addAddress('bar@example.com');                 // Add a recipient
+$mail->From = 'ogneyar-ne@yandex.ru';
+$mail->FromName = 'Ogneyar';
+$mail->addAddress('ya13th@mail.ru');  // добавить получателя
 
-$mail->WordWrap = 50;                                 // Set word wrap to 50 characters
+$mail->WordWrap = 50;                 // автоматический перенос символов
 
 $mail->Subject = 'Hello';
 $mail->Body    = 'Testing some Mailgun awesomness';
