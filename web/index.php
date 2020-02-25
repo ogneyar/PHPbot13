@@ -1,7 +1,8 @@
 <?
 
-mail("ya13th@mail.ru", "bbb", "hell");
+$result = mail("ya13th@mail.ru", "bbb", "hell");
 
-echo('ok');
+if ($result) echo('Отправил');
+else echo('Не смог отправить.. ');
 
 ?>
