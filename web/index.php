@@ -113,4 +113,6 @@ echo '888<br><br>';
 
 // Подключаем файл бота
 include_once 'botInfoUsers.php';
+
+include_once 'botMadeline.php';
 ?>
