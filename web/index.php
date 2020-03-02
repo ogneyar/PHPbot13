@@ -61,7 +61,7 @@
 				<p><a href="" title="">Читать далее</a><span>30 ноября 2015 в 1:58</span></p>
 			</article>
 			<article>
-				<a href="" title=""><img src="img/art/2.jpg" alt="" title=""/></a>
+				<a href="" title=""><img src="img/art/1.jpg" alt="" title=""/></a>
 				<h2>Как создать игру? Часть 2/5</h2>
 				<p>На краудфандинговой платформе Kickstarter появилась кампания по сбору средств на производство очень своеобразного хэндмейда. 
 Шведский дизайнер Лав Хультен соединил дерево с олдскульной электроникой, создав тем самым эстетичный ретро-геймпад. 
@@ -69,7 +69,7 @@
 				<p><a href="" title="">Читать далее</a><span>30 ноября 2015 в 1:58</span></p>
 			</article>
 			<article>
-				<a href="" title=""><img src="img/art/3.jpg" alt="" title=""/></a>
+				<a href="" title=""><img src="img/art/1.jpg" alt="" title=""/></a>
 				<h2>Как создать игру? Часть 2/5</h2>
 				<p>На краудфандинговой платформе Kickstarter появилась кампания по сбору средств на производство очень своеобразного хэндмейда. 
 Шведский дизайнер Лав Хультен соединил дерево с олдскульной электроникой, создав тем самым эстетичный ретро-геймпад. 
@@ -77,7 +77,7 @@
 				<p><a href="" title="">Читать далее</a><span>30 ноября 2015 в 1:58</span></p>
 			</article>
 			<article>
-				<a href="" title=""><img src="img/art/4.jpeg" alt="" title=""/></a>
+				<a href="" title=""><img src="img/art/1.jpeg" alt="" title=""/></a>
 				<h2>Как создать игру? Часть 2/5</h2>
 				<p>На краудфандинговой платформе Kickstarter появилась кампания по сбору средств на производство очень своеобразного хэндмейда. 
 Шведский дизайнер Лав Хультен соединил дерево с олдскульной электроникой, создав тем самым эстетичный ретро-геймпад. 
@@ -91,7 +91,7 @@
 			</div>
 			<div class="banner">
 				<span>Стоит посмотреть:</span>
-				<iframe src="https://www.youtube.com/embed/LTesHQhKhnc" frameborder="0" allowfullscreen></iframe>
+				<iframe src="https://youtu.be/1mMzEIjz9uY" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<div class="banner">
 				<span>Поддержать проект:</span>
