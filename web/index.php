@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="utf-8" />	
-	<title>Test Website</title>
+	<title>PRIZMarket Ваш рынок!</title>
 	<meta name="description" content="" />
 	<meta name="author" content="" />
 	<meta name="robots" content="all,index,follow" />
