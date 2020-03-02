@@ -35,8 +35,8 @@
 <body>
 	<header>
 		<a href="/" id="logo">
-			<span></span>Test 
-			<span>W</span>ebsite
+			<span>PRIZM</span>arket 
+			<span>Ваш</span> рынок!
 		</a>
 		<span id="contact">
 			<a href="">Реклама</a>
