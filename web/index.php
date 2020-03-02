@@ -35,7 +35,7 @@
 <body>
 	<header>
 		<a href="/" id="logo">
-			<span>T</span>est 
+			<span></span>Test 
 			<span>W</span>ebsite
 		</a>
 		<span id="contact">
